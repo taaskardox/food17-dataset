@@ -1,0 +1,20 @@
+Background color = #000000
+
+Forground color:
+\fried_rice = #333333 
+\club_sandwich = #444444 
+\beet_salad = #555555 V
+\chicken_curry = #666666 
+\chicken_wings = #777777 
+\chocolate_cake = #888888
+\frozen_yogurt = #999999
+\ice_cream = #AAAAAA
+\sushi = #BBBBBB
+\peking_duck = #CCCCCC
+\pork_chop = #DDDDDD
+\ramen = #EEEEEE
+\hot_dog = #123456
+\hot_and_sour_soup = #112233
+\hamburger = #113344
+\pho = #111111
+\pizza = #222222 
