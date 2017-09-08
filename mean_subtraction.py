@@ -10,6 +10,8 @@ def main():
 
   path, txt_file = process_arguments(sys.argv)
 
+  mean = [0, 0, 0]
+  total_img = 0
 
   with open(txt_file, 'rb') as f:
     for img_name in f:
@@ -18,13 +20,17 @@ def main():
       img = imread(img_name)
 
       if (len(img.shape) > 2):
-	print(img)
+        total_img = total_img + 1
+        for i in range(3):
+          mean[i] += img[i,:,:].mean()
       else:
         print(img_name + " is not composed of three dimensions, therefore " 
               "shouldn't be processed by this script.\n"
               "Exiting." , file=sys.stderr)
-
         exit()
+  for i in range(3):
+      mean[i] /= total_img
+  print(total_img, mean)
 
 def process_arguments(argv):
   if len(argv) != 3:
